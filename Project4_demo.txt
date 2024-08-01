@@ -1,0 +1,20 @@
+cd C:\Users\Runlin Wang\Desktop\CS122B\Project1
+
+Fabflix-master:  private IP: 172.31.8.145
+ssh -i "CrispyChicken.pem" ubuntu@ec2-13-57-224-81.us-west-1.compute.amazonaws.com
+
+Fabflix-slave: private IP: 172.31.13.156
+ssh -i "CrispyChicken.pem" ubuntu@ec2-54-183-198-236.us-west-1.compute.amazonaws.com
+
+CS122B-Project: private IP: 172.31.25.229
+ssh -i "CrispyChicken.pem" ubuntu@ec2-54-193-119-160.us-west-1.compute.amazonaws.com 
+
+
+54.193.248.97
+https://<master IP>:8443/cs122b-project1-api-example/
+
+https://54.193.248.97:8443/cs122b-project1-api-example/
+
+
+
+

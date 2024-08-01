@@ -1,0 +1,49 @@
+cd C:\Users\Runlin Wang\Desktop\CS122B\Project1
+Fabflix-master:  private IP: 172.31.8.145
+ssh -i "CrispyChicken.pem" ubuntu@ec2-13-57-224-81.us-west-1.compute.amazonaws.com
+
+scp -i "CrispyChicken.pem" "C:\Users\Runlin Wang\Desktop\CS122B\Project1\cs122b-project1\createtable.sql" ubuntu@ec2-13-57-224-81.us-west-1.compute.amazonaws.com:/home/ubuntu/
+
+scp -i "CrispyChicken.pem" "C:\Users\Runlin Wang\Desktop\CS122B\Project1\cs122b-project1\movie-data.sql" ubuntu@ec2-13-57-224-81.us-west-1.compute.amazonaws.com:/home/ubuntu/
+
+
+Fabflix-slave: private IP: 172.31.13.156
+ssh -i "CrispyChicken.pem" ubuntu@ec2-54-183-198-236.us-west-1.compute.amazonaws.com
+
+
+CS122B-Project: private IP: 172.31.25.229
+ssh -i "CrispyChicken.pem" ubuntu@ec2-54-193-119-160.us-west-1.compute.amazonaws.com 
+
+
+sudo tail -f /var/lib/tomcat10/logs/*
+https://54.193.119.160:8443/manager/html
+http://54.193.119.160:8080/manager/html
+​http://54.193.119.160:80
+​http://54.193.119.160/cs122b-project5-TomcatPooling-example
+​http://54.193.119.160:8080/cs122b-project5-TomcatPooling-example
+http://54.193.119.160/cs122b-project2-session-example/session?myname=Michael
+
+https://54.193.119.160:8443/cs122b-project1-api-example
+
+
+https://13.57.224.81:8443/manager/html
+http://13.57.224.81:8080/manager/html
+http://13.57.224.81/cs122b-project5-TomcatPooling-example
+https://13.57.224.81:8443/cs122b-project1-api-example/
+
+https://54.183.198.236:8443/manager/html
+http://54.183.198.236:8080/manager/html
+https://54.183.198.236:8443/cs122b-project1-api-example/
+
+
+http://34.27.191.40:8080/manager/html
+https://34.27.191.40:8443/manager/html
+http://34.27.191.40:80
+​http://34.27.191.40:8080/cs122b-project5-TomcatPooling-example
+http://34.27.191.40:8080/cs122b-project1-api-example/
+
+
+mysql -u mytestuser -p
+
+select * from movies where title = "Scaling Fabflix1";
+My6$Password

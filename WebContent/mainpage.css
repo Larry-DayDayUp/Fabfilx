@@ -1,0 +1,152 @@
+/* General Reset */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Button styles */
+.btn {
+    background-color: #068FFF; /* Button color */
+    border: none;
+    border-radius: 5px;
+    color: #ffffff; /* Text color */
+    cursor: pointer;
+    padding: 8px 15px;
+    transition: background-color 0.3s; /* Smooth hover transition */
+}
+
+.btn:hover {
+    background-color: #0670F0; /* Darker blue on hover */
+}
+
+/* Dropdown styles */
+.dropdown {
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown-content {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default */
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    top: 100%;
+    z-index: 3;
+}
+
+.dropdown-content a {
+    color: #333;
+    display: block; /* Ensures full clickable area */
+    padding: 10px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Light gray on hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-row {
+    display: flex;
+    flex-direction: row; /* Horizontal arrangement */
+    gap: 5px; /* Space between items */
+}
+
+/* Dropdown trigger */
+.dropdown-trigger {
+    color: #333;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+/* Form inline styles */
+.form-inline {
+    display: flex;
+    gap: 10px; /* Space between input and button */
+    max-width: 400px;
+}
+
+/* Form control styles */
+.form-control {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    width: 100%;
+}
+
+/* Content container styles */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    padding: 20px;
+    z-index: 1;
+}
+
+/* Background image and overlay styles */
+.background-image {
+    align-items: center;
+    background-image: url("assets/signin_bg.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+/* Navbar content styles */
+.navbar-content {
+    align-items: center;
+    display: flex;
+    gap: 15px; /* Space between elements */
+}
+
+/* Navbar brand styles */
+.navbar-brand {
+    color: #333;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Search container styles */
+.search-container {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="mainpage.css">
+    <link rel="stylesheet" type="text/css" href="operation.css">
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+
+    <!-- Page title and icon -->
+    <title>Fabflix Dashboard</title>
+    <link rel="icon" href="assets/logo-no-background.svg" type="image/svg+xml">
+
+    <!-- Metadata -->
+    <meta name="description" content="Fabflix Dashboard for managing movies and stars">
+    <meta name="keywords" content="Fabflix, Dashboard, Movies, Stars">
+    <meta name="author" content="Your Name">
+
+    <!-- Add more metadata if necessary -->
+</head>
+<body>
+
+
+<!-- Navigation bar -->
+<nav class="navbar">
+    <div class="navbar-content">
+        <!-- Brand/Logo -->
+        <a class="navbar-brand" href="mainpage.html">Fablix</a>
+
+        <!-- Search Bar and Search Button -->
+        <div class="search-container">
+            <form id="search_form" class="form-inline" action="searchbar.html" method="GET">
+                <input id="autocomplete" class="form-control autocomplete-searchbox" type="search" placeholder="Find Movies" name="query">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+
+        <!-- Dropdown for Genres -->
+        <div class="dropdown">
+            <span class="dropdown-trigger">Genres</span>
+            <div id="genre-dropdown-content" class="dropdown-content"></div>
+        </div>
+
+        <!-- Dropdown for Titles -->
+        <div class="dropdown">
+            <span class="dropdown-trigger">Titles</span>
+            <div id="title-dropdown-content" class="dropdown-content"></div>
+        </div>
+
+        <!-- Advanced Search -->
+        <div class="dropdown">
+            <span class="dropdown-trigger">Advanced Search</span>
+            <div class="dropdown-content">
+                <form id="advanced_search_form" action="advancedsearch.html" method="GET">
+                    <div class="dropdown-row">
+                        <input class="form-control" type="text" placeholder="Title" name="title">
+                    </div>
+                    <div class="dropdown-row">
+                        <input class="form-control" type="number" placeholder="Year" name="year">
+                    </div>
+                    <div class="dropdown-row">
+                        <input class="form-control" type="text" placeholder="Director" name="director">
+                    </div>
+                    <div class="dropdown-row">
+                        <input class="form-control" type="text" placeholder="Star's Name" name="star">
+                    </div>
+                    <button type="submit" class="btn">Advanced Search</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- New link to operation.html -->
+        <a href="operation.html" class="navbar-link">Operations</a> <!-- Added link to Operations page -->
+
+    </div>
+</nav>
+
+<!-- Dashboard content -->
+<div class="dashboard-container">
+    <!-- Section for database metadata -->
+    <h2>Database Metadata</h2>
+    <div id="metadata-container">
+        <!-- Metadata will be inserted here -->
+    </div>
+
+    <!-- Other dashboard content -->
+    <!-- You can add additional forms or features here -->
+</div>
+
+
+
+<!-- JavaScript for dynamic dropdown content and AJAX -->
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/devbridge-autocomplete@1.4.7/dist/jquery.autocomplete.min.js"></script>
+
+<script src="searchbar.js"></script>
+<script src="advancedsearch.js"></script>
+<script src="genre.js"></script>
+<script src="title.js"></script>
+<script src="operation.js"></script>
+<script src="dashboard.js"></script>
+
+</body>
+</html>

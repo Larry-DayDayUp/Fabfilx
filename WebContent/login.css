@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.background-image {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("assets/signin_bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.login-container {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-text {
+    margin-top: 1rem;
+    text-align: center;
+
+    font-family: 'Poppins', sans-serif;
+    color: #EEEEEE;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container label {
+    font-weight: bold;
+    color: #EEEEEE;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    height: 2rem; /* consistent height */
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    color: #EEEEEE;
+    font-size: 0.9rem;
+    background-color: rgba(238, 238, 238, 0.2);
+    caret-color: #EEEEEE;
+}
+
+input::placeholder {
+    opacity: 0;
+}
+
+.login-container input[type="email"]::placeholder,
+.login-container input[type="password"]::placeholder {
+    opacity: 1;
+}
+
+.login-container input[type="submit"] {
+    height: 2.8rem;
+    padding: 10px;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+
+    border: none;
+    border-radius: 4px;
+
+    background-color: #068FFF;
+    font-size: 1rem;
+    color: #EEEEEE;
+
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #0670F0;
+}
+
+/* Icon styles */
+.login-container form label i {
+    margin-right: 5px;
+}
+
+/*Texts*/
+.label-text {
+    font-family: sans-serif;
+    font-weight: 200;
+}

@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.background-image {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("assets/signin_bg.jpg"); /* Background image */
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for additional contrast */
+}
+
+.login-container {
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9); /* White with slight opacity for container */
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px; /* Rounded corners for softer look */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Deep shadow for depth */
+}
+
+.login-text {
+    margin-top: 1rem;
+    text-align: center;
+    color: #333333; /* Dark gray text color */
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container label {
+    font-weight: bold;
+    color: #333333; /* Dark gray for labels */
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    height: 2rem;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #CCCCCC; /* Light gray border */
+    border-radius: 4px;
+    color: #333333; /* Dark gray text */
+    font-size: 0.9rem;
+    background-color: #F5F5F5; /* Light gray background */
+    caret-color: #333333; /* Dark gray caret */
+}
+
+input::placeholder {
+    opacity: 1;
+    color: #B0B0B0; /* Medium gray placeholder color */
+}
+
+.login-container input[type="submit"] {
+    height: 2.8rem;
+    padding: 10px;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+
+    border: none;
+    border-radius: 4px;
+
+    background-color: #FF3B3B; /* Solid red for the login button */
+    font-size: 1rem;
+    color: #FFFFFF; /* White text for contrast */
+
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #CC3333; /* Darker red for hover */
+}
+
+/* Icon styles */
+.login-container form label i {
+    margin-right: 5px;
+    color: #333333; /* Dark gray for icons */
+}
+
+/* General text styles */
+.label-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}

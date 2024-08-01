@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="mainpage.css">
+    <link rel="stylesheet" type="text/css" href="operation.css">
+
+    <!-- Page title and icon -->
+    <title>Fabflix Operation</title>
+    <link rel="icon" href="assets/logo-no-background.svg" type="image/svg+xml">
+</head>
+<body>
+
+
+<!-- Navigation bar -->
+<nav class="navbar">
+    <div class="navbar-content">
+        <!-- Brand/Logo -->
+        <a class="navbar-brand" href="mainpage.html">Fablix</a>
+
+        <!-- Search Bar and Search Button -->
+        <div class="search-container">
+            <form id="search_form" class="form-inline" action="searchbar.html" method="GET">
+                <input id="autocomplete" class="form-control autocomplete-searchbox" type="search" placeholder="Find Movies" name="query">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+
+        <!-- Dropdown for Genres -->
+        <div class="dropdown">
+            <span class="dropdown-trigger">Genres</span>
+            <div id="genre-dropdown-content" class="dropdown-content"></div>
+        </div>
+
+        <!-- Dropdown for Titles -->
+        <div class="dropdown">
+            <span class="dropdown-trigger">Titles</span>
+            <div id="title-dropdown-content" class="dropdown-content"></div>
+        </div>
+
+        <!-- Advanced Search -->
+        <div class="dropdown">
+            <span class="dropdown-trigger">Advanced Search</span>
+            <div class="dropdown-content">
+                <form id="advanced_search_form" action="advancedsearch.html" method="GET">
+                    <div class="dropdown-row">
+                        <input class="form-control" type="text" placeholder="Title" name="title">
+                    </div>
+                    <div class="dropdown-row">
+                        <input class="form-control" type="number" placeholder="Year" name="year">
+                    </div>
+                    <div class="dropdown-row">
+                        <input class="form-control" type="text" placeholder="Director" name="director">
+                    </div>
+                    <div class="dropdown-row">
+                        <input class="form-control" type="text" placeholder="Star's Name" name="star">
+                    </div>
+                    <button type="submit" class="btn">Advanced Search</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- New link to operation.html -->
+        <a href="operation.html" class="navbar-link">Operations</a> <!-- Added link to Operations page -->
+
+    </div>
+</nav>
+
+<div class="login-container">
+    <h2>Dashboard</h2>
+
+    <!-- Form for Inserting a New Star -->
+    <h3>New Star</h3>
+    <form id="starForm" class="form-inline">
+        <input type="text" id="starName" placeholder="Star Name" required class="form-control">
+        <input type="number" id="starBirthYear" placeholder="Birth Year" class="form-control">
+        <button type="submit" class="btn">Insert Star</button>
+    </form>
+
+    <!-- Form for Adding a New Movie -->
+    <h3>New Movie</h3>
+    <form id="movieForm" class="form-inline">
+        <input type="text" id="movieTitle" placeholder="Movie Title" required class="form-control">
+        <input type="number" id="releaseYear" placeholder="Release Year" required class="form-control">
+        <input type="text" id="director" placeholder="Director" required class="form-control">
+        <input type="text" id="starNameMovie" placeholder="Star Name" required class="form-control">
+        <input type="text" id="genreName" placeholder="Genre Name" required class="form-control">
+        <button type="submit" class="btn">Add Movie</button>
+    </form>
+</div>
+
+<!-- JavaScript for dynamic dropdown content and AJAX -->
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/devbridge-autocomplete@1.4.7/dist/jquery.autocomplete.min.js"></script>
+
+<script src="searchbar.js"></script>
+<script src="advancedsearch.js"></script>
+<script src="genre.js"></script>
+<script src="title.js"></script>
+<script src="operation.js"></script>
+
+</body>
+</html>

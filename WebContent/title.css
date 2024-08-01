@@ -1,0 +1,6 @@
+/* title.css - Custom styles for the title.html page */
+
+/* Add padding or margin to prevent overlap with navbar */
+.title-page .content-container {
+    padding-top: 70px; /* Adjust this value to ensure content is below navbar */
+}

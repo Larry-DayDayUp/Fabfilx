@@ -1,0 +1,76 @@
+/* searchbar.css - Custom styles for the searchbar.html page */
+
+/* Add padding or margin to prevent overlap with navbar */
+.searchbar-page .content-container {
+    padding-top: 70px; /* Adjust this value to ensure content is below navbar */
+}
+
+.same-line {
+    display: flex;
+    justify-content: space-between;  /* Heading on the left, controls on the right */
+    align-items: center;  /* Align vertically */
+    margin-bottom: -1rem  /* Add some padding for spacing */
+}
+
+/* Pagination Controls */
+.pagination-controls {
+    display: flex;
+    flex-direction: row;  /* Keep buttons and drop-down in a row */
+    align-items: center;  /* Align vertically */
+    gap: 10px;  /* Add spacing between controls */
+}
+
+/* Pagination Buttons */
+.pagination-controls button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination-controls button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+/* Drop-Down Menu for Results Per Page */
+.pagination-controls select {
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    margin-left: 10px;
+    background-color: white;
+    color: #333333;
+    cursor: pointer;
+}
+
+.pagination-controls select:hover {
+    border-color: #007bff;
+}
+
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+.autocomplete-group { padding: 2px 5px; }
+.autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.autocomplete-searchbox {
+    height: 50px;
+    width: 600px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- jQuery -->
+</head>
+<body class="container">
+<h2 class="my-4">Order Confirmation</h2>
+
+<div class="alert alert-success" role="alert">
+    Your order has been placed successfully! Thank you for shopping with us.
+</div>
+
+<!-- Display order details here -->
+<div>
+    <p>Order Confirmation Number: <span id="confirmation_number">XXXXXX</span></p> <!-- Placeholder for confirmation number -->
+    <p>Order Date: <span id="order_date">YYYY-MM-DD</span></p> <!-- Placeholder for order date -->
+    <p>Order Total: <span id="order_total">$0.00</span></p> <!-- Placeholder for order total -->
+
+    <h4 class="my-4">Order Summary</h4>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Movie Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Subtotal</th>
+        </tr>
+        </thead>
+        <tbody id="order_summary">
+        <!-- Order summary will be populated here -->
+        </tbody>
+    </table>
+</div>
+
+<p>If you have any questions or issues, please contact our customer support.</p>
+
+<button class="btn btn-primary" id="back_to_shop">Back to Shop</button> <!-- Button to go back to the shopping page -->
+
+<script>
+    // Sample data for illustration; replace with real data
+    const confirmationNumber = "123456"; // Example confirmation number
+    const orderDate = new Date().toISOString().split("T")[0]; // Get current date in YYYY-MM-DD
+    const orderTotal = sessionStorage.getItem("totalPrice"); // Retrieve total price from session storage
+    const orderSummary = JSON.parse(sessionStorage.getItem("shoppingCart") || "[]"); // Retrieve shopping cart for summary
+
+    // Set the order details
+    document.getElementById("confirmation_number").innerText = confirmationNumber;
+    document.getElementById("order_date").innerText = orderDate;
+    document.getElementById("order_total").innerText = `$${orderTotal}`;
+
+    // Populate the order summary table
+    const orderSummaryElement = document.getElementById("order_summary");
+    orderSummary.forEach((item) => {
+        const rowHTML = `
+                <tr>
+                    <td>${item.movie_title}</td> <!-- Movie title -->
+                    <td>${item.quantity}</td> <!-- Quantity -->
+                    <td>$${parseFloat(item.price).toFixed(2)}</td> <!-- Price -->
+                    <td>$${parseFloat(item.subtotal).toFixed(2)}</td> <!-- Subtotal -->
+                </tr>
+            `;
+        orderSummaryElement.insertAdjacentHTML("beforeend", rowHTML); // Append the row to the table
+    });
+
+    // Button to go back to the shopping page
+    document.getElementById("back_to_shop").onclick = function() {
+        window.location.href = "shoppingCart.html"; // Redirect to the shopping cart page
+    };
+</script>
+</body>
+</html>

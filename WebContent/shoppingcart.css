@@ -1,0 +1,6 @@
+/* shoppingcart.css - Custom styles for the shoppingcart.html page */
+
+/* Add padding or margin to prevent overlap with navbar */
+.shoppingcart-page .content-container {
+    padding-top: 70px; /* Adjust this value to ensure content is below navbar */
+}

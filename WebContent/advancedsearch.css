@@ -1,0 +1,6 @@
+/* advancedsearch.css - Custom styles for the advancedsearch.html page */
+
+/* Add padding or margin to prevent overlap with navbar */
+.advancedsearch-page .content-container {
+    padding-top: 70px; /* Adjust this value to ensure content is below navbar */
+}

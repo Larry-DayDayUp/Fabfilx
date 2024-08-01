@@ -1,0 +1,88 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    background-color: #068FFF; /* Default button color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    color: #ffffff; /* White text */
+    padding: 10px 20px; /* Padding for button */
+    cursor: pointer; /* Cursor change on hover */
+    transition: background-color 0.3s; /* Smooth hover transition */
+    flex-shrink: 0; /* Prevent button from shrinking */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+
+.btn:hover {
+    background-color: #0670F0; /* Darker blue on hover */
+}
+
+/* Form inline styles */
+.form-inline {
+    display: flex;
+    gap: 15px; /* Space between input and button */
+    max-width: 800px;
+    align-items: center;
+}
+
+/* Form control styles */
+.form-control {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Content container styles */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Increased width */
+    padding: 30px; /* Increased padding */
+    margin: 100px auto; /* Centered with space from the top */
+    z-index: 1; /* Below the navbar */
+}
+
+/* Additional styles for layout */
+
+h2 {
+    color: #333; /* Darker text color */
+    text-align: left; /* Align text to the left */
+    margin: 0; /* Remove default margin for precise positioning */
+    padding: 0; /* Remove default padding */
+}
+
+h3 {
+    color: #333;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.container {
+    padding: 30px; /* Padding for spacing */
+    max-width: 800px; /* Container width */
+    margin: 100px auto; /* Centered with space from the top */
+    background-color: rgba(255, 255, 255, 0.9); /* Light background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.navbar-link {
+    color: #333; /* Match the color with existing navbar elements */
+    text-decoration: none; /* Remove underlines */
+    font-size: 1.1em; /* Consistent with dropdown */
+    padding: 10px; /* Add padding for spacing */
+    transition: color 0.3s; /* Smooth transition for hover effects */
+}
+
+.navbar-link:hover {
+    color: #068FFF; /* Change color on hover, consistent with other links */
+}
+

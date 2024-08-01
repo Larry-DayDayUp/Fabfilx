@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> <!-- Bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- jQuery -->
+</head>
+<body class="container"> <!-- Bootstrap container -->
+<h2 class="my-4">Payment Information</h2>
+
+<!-- Alert for total price -->
+<div class="alert alert-info" role="alert">
+  Total Price: <span id="total_price">$0.00</span> <!-- Placeholder for total price -->
+</div>
+
+<!-- Form to gather credit card information -->
+<form id="order_form">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="first_name">First Name:</label>
+      <input type="text" class="form-control" id="first_name" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="last_name">Last Name:</label>
+      <input type="text" class="form-control" id="last_name" required>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="card_number">Credit Card Number:</label>
+      <input type="text" class="form-control" id="card_number" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="expiration_date">Expiration Date (YYYY-MM-DD):</label> <!-- Date format -->
+      <input type="text" class="form-control" id="expiration_date" placeholder="YYYY-MM-DD" required>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-primary" id="place_order">Place Order</button> <!-- Place order button -->
+</form>
+
+<div id="order_result" class="mt-3"></div> <!-- Display the result of placing the order -->
+
+<script src="payment.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+/* genre.css - Custom styles for the genre.html page */
+
+/* Add padding or margin to prevent overlap with navbar */
+.genre-page .content-container {
+    padding-top: 70px; /* Adjust this value to ensure content is below navbar */
+}

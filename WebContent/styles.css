@@ -1,0 +1,87 @@
+body {
+    padding-top: 80px;
+}
+
+/*Home Page*/
+/* Style for the main container to ensure proper spacing */
+.movies-container {
+    width: 100vw;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    justify-content: center;
+    align-content: center;
+}
+
+/* Table styling for better readability */
+#movie_table, #single-movie_table {
+    width: 100%;
+    table-layout: fixed;
+
+    margin-bottom: 5rem;
+}
+
+#movie_table th, #movie_table td, #single-movie_table th, #single-movie_table td {
+    text-align: left;
+    padding: 8px;
+}
+
+#movie_table tr:hover, #single-movie_table tr:hover {
+    background-color: #f1f1f1;
+}
+
+#single-movie_table, #movie_table {
+    margin-top: 2rem;
+}
+
+/*Others*/
+.table {
+    width: 100%;
+    table-layout: fixed;
+    box-shadow: 0px 5px 10px 0px #068FFF;
+    margin-bottom: 5rem;
+}
+
+p1 {
+    font-size: 2rem;
+}
+
+a {
+    color: #068FFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    color: #068FFF;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-left: 0.3rem;
+    color: #000000;
+}
+
+th {
+    background-color: #068FFF;
+    color: #EEEEEE;
+    font-size: 1.2rem;
+}
+
+.cart-col {
+    width: 3vw !important;
+    justify-content: center !important;;
+    align-items: center !important;;
+}
+
+/*Main Page*/
+.main-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

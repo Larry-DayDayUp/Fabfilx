@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Login - Fablix</title>
+    <link rel="icon" href="assets/logo-no-background.svg" type="image/svg+xml">
+    <!--Style Sheet and CSS-->
+    <link rel="stylesheet" type="text/css" href="employee.css">
+    <link rel="icon" sizes="32x32" href="assets/logo-no-background.svg" type="image/svg+xml">
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap' rel='stylesheet'>
+    <!-- Add reCAPTCHA script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+<body>
+<div class="background-image">
+    <div class="overlay"></div>
+    <div class="login-container">
+        <h2 class="login-text">Employee Login</h2>
+        <div id="employee_login_error_message" style="display: none;"></div> <!-- Element for error messages -->
+        <form action="#" id="employee_form" method="post">
+            <label for="employee_email" class="label-text">Email:</label>
+            <input placeholder="Enter Email" type="email" id="employee_email" name="email" required>
+
+            <label for="employee_password" class="label-text">Password:</label>
+            <input placeholder="Enter Password" type="password" id="employee_password" name="password" required>
+
+            <!-- Add reCAPTCHA widget -->
+            <div id="employee_reCAPTCHA" class="g-recaptcha" data-sitekey="6LcPw8wpAAAAAHDSaFgNevqiy206T5LwxngDSbDy"></div> <!-- Replace YOUR_SITE_KEY with your actual site key -->
+            <input type="submit" value="Login">
+
+        </form>
+    </div>
+</div>
+
+<!-- include your own JS file -->
+<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+<script type='text/javascript' src='employee.js'></script>
+</body>
+</html>
